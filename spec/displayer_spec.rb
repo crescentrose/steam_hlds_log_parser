@@ -20,13 +20,13 @@ module SteamHldsLogParser
       context "when 'data' is given" do
 
         subject { @displayer }
-        it { should be_an_instance_of Displayer } 
+        it { should be_an_instance_of Displayer }
 
         describe "#get_data" do
           subject { @displayer.get_data }
           it "returns 'data' given as argument" do
-            should_not be_nil      
-            should be(@data)      
+            should_not be_nil
+            should be(@data)
           end
         end
 
@@ -38,9 +38,9 @@ module SteamHldsLogParser
 
         describe "#get_translation" do
           it "returns translated 'data' given as argument" do
-            expect(@displayer.get_translation).not_to be_nil      
-            expect(@displayer.get_translation.class).to be(String)      
-            expect(@displayer.get_translation).to eq("[CT] 3 - 0 [T]")      
+            expect(@displayer.get_translation).not_to be_nil
+            expect(@displayer.get_translation.class).to be(String)
+            expect(@displayer.get_translation).to eq("[CT] 3 - 0 [T]")
           end
         end
 

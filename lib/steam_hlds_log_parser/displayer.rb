@@ -30,7 +30,7 @@ module SteamHldsLogParser
     # @return [String] Translated data processed by Handler class
     #
     def get_translation
-      return I18n.t(@data[:type], @data[:params]) unless @data[:type].nil?
+      return I18n.t(@data[:type], **@data[:params]) unless @data[:type].nil?
     end
 
     # Display data translation

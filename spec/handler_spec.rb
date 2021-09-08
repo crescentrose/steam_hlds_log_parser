@@ -189,7 +189,7 @@ module SteamHldsLogParser
               data = '# L 05/10/2000 - 12:34:56: Loading map "de_dust2"'
               expected = {:type=>"loading_map", :params=>{:map=>"de_dust2"}}
               expect(@custom_handler.displayer).to be(RSpecDisplayer)
-              expect(@custom_handler.options[:display_changelevel]).to be_true
+              expect(@custom_handler.options[:display_changelevel]).to be true
               expect(@custom_handler.receive_data(data).data).to eq(expected)
             end
           end
